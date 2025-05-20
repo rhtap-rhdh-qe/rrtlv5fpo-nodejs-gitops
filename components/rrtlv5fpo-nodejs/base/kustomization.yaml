@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: rrtlv5fpo-nodejs
+  janus-idp.io/tekton: rrtlv5fpo-nodejs
+  backstage.io/kubernetes-id: rrtlv5fpo-nodejs
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: rrtlv5fpo-nodejs
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
